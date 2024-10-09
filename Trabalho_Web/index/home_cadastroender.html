@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../script/login.js"></script>
-    <link rel="stylesheet" href="../styles/login.css"> 
-    <title>Cadastro</title>
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cereal:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/home (1).css">
+    <script src="../script/cadastro_endereco.js"></script>
 </head>
 <body>
-    <div class="header">
+
+    <header class="header">
         <div class="logo">
             <h1><a href="./home (2).html">Airbnb</a></h1>
         </div>
@@ -19,26 +21,20 @@
                 <li><a href="./login.html">Login</a></li>
             </ul>
         </nav>
-    </div>
+    </header>
 
-    <div class="form-container">
-        <h2>Login</h2>
-        <form>
-            
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" autocomplete="username" placeholder="Digite seu email" required/>
-
-            <label for="password">Senha:</label>
-            <input type="password" name="password" id="password" autocomplete="current-password" placeholder="Digite sua senha" required/>
-
-            <button type="button" onclick="login()">Enviar</button>
-        </form>
-    </div>
+    <main class="main-content">
+        <section class="welcome-section">
+            <h2>Cadastre seu Endereço</h2>
+            <a href="./cadastro_endereco.html"><button>Cadastre-se</button></a>
+        </section>
+    </main>
 
     <div class="footer">
         <p>&copy; 2024 Airbnb. Todos os direitos reservados.</p>
         <a href="#">Política de Privacidade</a>
         <p class="small-text">Desenvolvido por Davi Fontenelle, Fabio Luz, Gustavo Guimarões, Helena Andreassi e Victor Andreassi</p>
     </div>
+
 </body>
 </html>

@@ -1,11 +1,9 @@
 const url = "https://go-wash-api.onrender.com/api/login"
 async function login(){
-    let name = document.getElementById('name').value
+    
     let email = document.getElementById('email').value
     let password = document.getElementById('password').value
-    let cpf_cnpj = document.getElementById('cpf_cnpj').value
-    let birthday = document.getElementById('birthday').value
-    let terms = document.getElementById('terms').ariaChecked
+    
 
 
     if (email === "") {
@@ -35,7 +33,8 @@ async function login(){
     if(api.ok){
         let resposta = await api.json();
         localStorage.setItem("user", JSON.stringify(resposta))
-
+        alert("Login realizado com sucesso")
+        location.href = "../index/home_cadastroender.html"
         console.log(resposta)
         return
         
