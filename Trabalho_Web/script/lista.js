@@ -1,27 +1,18 @@
-const url = "https://go-wash-api.onrender.com/api/auth/address";
-
-function listar() {
-  let token = JSON.parse(localStorage.getItem("user"));
-
-  fetch(url, {
+async function listarendereco(){
+  let response = await fetch(url,{
     method: "GET",
-    redirect: "follow",
-    headers: {
-      'Authorization': 'Bearer ' + token.access_token
+    headers:{
+      'Content-Type': 'application/json',
+      'Authorization':'Bearer ' +JSON.parse(localStorage.getItem('user')).access_token,
     }
-  })
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json(); // Converte a resposta em JSON
-  })
-  .then(enderecos => {
-    enderecos.forEach(endereco => {
-      console.log(endereco);
-    });
-  })
-  .catch(error => {
-    console.error('Houve um problema com a requisição:', error);
+
   });
+  if(response.ok){
+    let data = await response.json();
+    console.log(data.data);
+
+  }else{
+    alert("Erro ao listar endereços");
+  }
+
 }
