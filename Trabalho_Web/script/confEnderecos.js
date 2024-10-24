@@ -1,4 +1,4 @@
-const url = "https://go-wash-api.onrender.com/api/auth/address"
+
 async function listarendereco(){
 
   let resposta = await fetch(url,{
@@ -10,25 +10,43 @@ async function listarendereco(){
 
   });
   if(resposta.ok){
-    const enderecos = await resposta.json();
-    console.log(enderecos.data);
+    const teste = await resposta.json();
+    console.log(teste.data);
+    listar(teste.data)
 
   }else{
     alert("Erro ao listar endereços");
   }
   
+  let tbody = document.querySelector("tbody")
+  let row = ""
 
   
- 
-  enderecos.forEach(endereco => {
-    const title = endereco.title || '';
-    const cep = endereco.cep || '';
-    const address = endereco.endereco || '';
-    const numero = endereco.numero ? `Número: ${endereco.numero}` : ''; 
-    const complemento = endereco.complemento ? ` - Complemento: ${endereco.complemento}` : ''; 
-    console.log(title)
-
+ function listar(teste){
+ let end =  teste.forEach(endereco => {
+    let id = endereco.id
+    let title = endereco.title
+    let cep = endereco.cep 
+    let address = endereco.address
+    let numero = endereco.number 
+    let complemento = endereco.complement
+    console.log(title,cep,address,numero,complemento)
+    row += `<tr>
+                <th>${endereco.id}</th>
+                <th>${endereco.title}</th>
+                <th>${endereco.cep}</th>
+                <th>${endereco.address}</th>
+                <th>${endereco.id}</th>
+    </tr>
+    `
   });
+  let tbody = document.querySelector("tbody")
+  let row = ""
+
+ }
+  
+
+
 
 /*function atualizacao(){
   let response = await fetch(url,{
