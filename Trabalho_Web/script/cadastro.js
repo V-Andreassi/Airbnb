@@ -51,7 +51,7 @@ async function cadastro(){
             'Content-Type':'application/json'
         }
     })
-
+    console.log(api)
     if(api.ok){
         let resposta = await api.json();
         alert("Cadastro realizado :)")

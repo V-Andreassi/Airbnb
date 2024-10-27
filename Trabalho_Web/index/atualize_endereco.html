@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/autualize_endereco.css">
+    <script src="../script/confEnderecos.js"></script>
+    <title>Atualize seu endreço</title>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Atualize seu Endereço:</h2>
+        <form>
+            <label for="title">Titulo:</label>
+            <input type="text" name="title" id="title" required/>
+            
+            <label for="cep">CEP:</label>
+            <input type="number" name="cep" id="cep" required/>
+            
+            <label for="endereco">Endereço:</label>
+            <input type="text" name="endereco" id="endereco"  required/>
+            
+            <label for="numero">Número:</label>
+            <input type="number" name="numero" id="numero"  required/>
+            
+            <label for="cpf_cnpj">Complemento:</label>
+            <input type="text" name="complemento" id="complemento"  required/>
+            
+            <button type="button" onclick="atualizarEndereco()">Enviar</button>
+        </form>
+    </div>
+</body>
