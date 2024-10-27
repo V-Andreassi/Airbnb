@@ -18,8 +18,6 @@ async function listarendereco(){
     alert("Erro ao listar endereços");
   }
   
-  let tbody = document.querySelector("tbody")
-  let row = ""
 
   
  function listar(teste){
@@ -30,31 +28,13 @@ async function listarendereco(){
     let address = endereco.address
     let numero = endereco.number 
     let complemento = endereco.complement
-    console.log(title,cep,address,numero,complemento)
-    row += `<tr>
-                <th>${endereco.id}</th>
-                <th>${endereco.title}</th>
-                <th>${endereco.cep}</th>
-                <th>${endereco.address}</th>
-                <th>${endereco.id}</th>
-    </tr>
-    `
-  });
-  let tbody = document.querySelector("tbody")
-  let row = ""
-
- }
+    console.log(id,title,cep,address,numero,complemento)
   
+  });
+ }
+}
 
-
-
-/*function atualizacao(){
-  let response = await fetch(url,{
-    method: "GET",
-    headers:{
-      'Content-Type': 'application/json',
-      'Authorization':'Bearer ' +JSON.parse(localStorage.getItem('user')).access_token,
-    }*/
-    
-
+atualizarEndereco(){
+  id = 1
+  let urlID = window.location.href="https://go-wash-api.onrender.com/api/auth/address/"+id
 }
