@@ -37,7 +37,7 @@ async function listarendereco(){
     novaLinha.innerHTML = `<td>${title}</td><td>${cep}</td><td>${address}</td><td>${numero}</td><td>${complemento}</td> <button><a href="../index/atualize_endereco.html?id=${id}">atualizar</a></button>`;
     atualizarEndereco()
 
-    novaLinha.innerHTML = `<td>${title}</td><td>${cep}</td><td>${address}</td><td>${numero}</td><td>${complemento}</td> <button><a href="../index/atualize_endereco.html">atualizar</a></button>`;
+    
 
   
 
