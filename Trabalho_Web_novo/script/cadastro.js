@@ -53,6 +53,7 @@ async function cadastro(){
     })
     console.log(api)
     if(api.ok){
+        console.log(api)
         let resposta = await api.json();
         alert("Cadastro realizado :)")
 
@@ -62,7 +63,7 @@ async function cadastro(){
     }
     let respostaErro = await api.json();
     console.log(respostaErro);
-    alert(respostaErro.data.errors.cpf_cnpj[0]);
+    //alert(respostaErro.data.errors.cpf_cnpj[0]);
 
     alert(respostaErro.data.errors.email);
     
