@@ -16,7 +16,7 @@ async function listarendereco(){
     listar(teste.data)
 
   }else{
-    alert("Erro ao listar endereços");
+    //alert("Erro ao listar endereços");
   }
   
 
@@ -73,7 +73,7 @@ async function listarendereco(){
     listar(teste.data)
 
   }else{
-    alert("Erro ao listar endereços");
+    //alert("Erro ao listar endereços");
   }
   
 
