@@ -32,8 +32,8 @@ async function listarendereco(){
     console.log(id,title,cep,address,numero,complemento)
     const tabelaBody = document.getElementById("minhaTabela");
     const novaLinha = tabelaBody.insertRow();
-    novaLinha.innerHTML = `<td>${title}</td><td>${cep}</td><td>${address}</td><td>${numero}</td><td>${complemento}</td> <button><a href="../index/atualize_endereco.html">atualizar</a></button>`;
 
+    novaLinha.innerHTML = `<td>${title}</td><td>${cep}</td><td>${address}</td><td>${numero}</td><td>${complemento}</td> <button><a href="../index/atualize_endereco.html?id=${id}">atualizar</a></button>`;
   
   });
  }
