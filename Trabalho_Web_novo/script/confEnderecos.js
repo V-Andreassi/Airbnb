@@ -1,4 +1,4 @@
-let lastID;
+
 async function listarendereco(){
 
 
@@ -14,9 +14,10 @@ async function listarendereco(){
     const teste = await resposta.json();
     console.log(teste.data);
     listar(teste.data)
+    return
 
   }else{
-    //alert("Erro ao listar endereços");
+    alert("Erro ao listar endereços");
   }
   
 
@@ -71,9 +72,10 @@ async function listarendereco(){
     let teste = await resposta.json();
     console.log(teste.data);
     listar(teste.data)
+    return
 
   }else{
-    //alert("Erro ao listar endereços");
+    alert("Erro ao listar endereços");
   }
   
 
