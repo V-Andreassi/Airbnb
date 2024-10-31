@@ -35,7 +35,7 @@ async function listarendereco(){
     const tabelaBody = document.getElementById("minhaTabela");
     const novaLinha = tabelaBody.insertRow();
 
-    novaLinha.innerHTML = `<td>${title}</td><td>${cep}</td><td>${address}</td><td>${numero}</td><td>${complemento}</td> <button><a href="../index/atualize_endereco.html?id=${id}">atualizar</a></button>`;
+    novaLinha.innerHTML = `<td>${title}</td><td>${cep}</td><td>${address}</td><td>${numero}</td><td>${complemento}</td> <button><a href="../index/atualize_endereco.html?id=${id}">atualizar</a><td></button><button onclick="removerEndereco(${id})"><a>remover</a></buttom></td>`;
     atualizarEndereco()
 
     
@@ -75,7 +75,7 @@ async function listarendereco(){
     return
 
   }else{
-    alert("Erro ao listar endereços");
+    //alert("Erro ao listar endereços");
   }
   
 
@@ -162,4 +162,27 @@ async function listarendereco(){
         location.href = "../index/home_cadastroender.html"
         return
     }
+}
+
+async function removerEndereco(id){
+  
+  
+  let token = JSON.parse(localStorage.getItem("user"));
+  const urlID = `https://go-wash-api.onrender.com/api/auth/address/`+id
+  
+  let api = await fetch(urlID,{
+       method: "DELETE",
+       headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer' + token.access_token
+       }
+       
+   })
+   if(api.ok){
+       let resposta = await api.json();
+       alert("Seu endereço foi removido com sucesso!")
+}else{
+  alert("Erro ao remover o endereço")
+}
+
 }
