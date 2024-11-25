@@ -13,6 +13,7 @@ let api = await fetch(url,{
  })
  if(api.ok){
     let resposta = await api.json();
+    localStorage.removeItem('user')
     alert(resposta.data)
     window.location.href = "../index/home.html"
     
