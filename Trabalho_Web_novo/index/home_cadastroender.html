@@ -9,8 +9,11 @@
     <script src="../script/cadastro_endereco.js"></script>
     <script src="../script/confEnderecos.js"></script>
     <script src="../script/logout.js"></script>
+    <script src="../script/cadastrocarro.js"></script>
 </head>
-<body onload="listarendereco()">
+
+<body>
+
 
     <header class="header">
         <div class="logo">
@@ -30,12 +33,14 @@
         <section class="welcome-section">
             <h2>Cadastre seu Endereço</h2>
             <a href="./cadastro_endereco.html"><button>Cadastre novo endereço</button></a>
+            <button onclick="veiculo()">Cadastre seu veículo aqui </button>
+
             
             <br><br>
             
                 <table border="7" width="600" id="minhaTabela">
                     <tr>
-                        <th>Título</th>
+                        <th>brand</th>
                         <th>Cep</th>
                         <th>Endereço</th>
                         <th>Número</th>
